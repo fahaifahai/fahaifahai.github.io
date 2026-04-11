@@ -312,6 +312,59 @@ a {
   border-radius: 1.8rem;
 }
 
+.site-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1.5rem;
+  color: var(--muted);
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: var(--text);
+}
+
+.policy-shell {
+  min-height: 100vh;
+}
+
+.policy-layout {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 7rem);
+  padding: 2rem 0 4rem;
+}
+
+.policy-card {
+  width: min(100%, 760px);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid var(--line);
+  border-radius: 2rem;
+  background: var(--bg-soft);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+}
+
+.policy-card h1 {
+  margin: 0 0 1rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.5rem, 7vw, 4.75rem);
+  line-height: 0.95;
+}
+
+.policy-card p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.policy-updated {
+  margin-top: 1.75rem;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
 @media (max-width: 900px) {
   .hero-content,
   .info-grid,
@@ -362,5 +415,9 @@ a {
 
   .nav-links {
     gap: 1rem;
+  }
+
+  .site-footer {
+    justify-content: flex-start;
   }
 }
