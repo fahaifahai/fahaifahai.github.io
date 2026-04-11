@@ -172,6 +172,86 @@ a {
   justify-content: center;
 }
 
+.portfolio-panel {
+  width: min(100%, 430px);
+  padding: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 2rem;
+  background:
+    radial-gradient(circle at top right, rgba(137, 240, 200, 0.16), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.05));
+  box-shadow: var(--shadow);
+}
+
+.portfolio-head {
+  margin-bottom: 1rem;
+}
+
+.portfolio-head h2 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  line-height: 1.05;
+}
+
+.portfolio-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.portfolio-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 1.2rem;
+  background: rgba(7, 17, 31, 0.78);
+}
+
+.portfolio-item-live {
+  border-color: rgba(137, 240, 200, 0.45);
+  background:
+    linear-gradient(180deg, rgba(137, 240, 200, 0.12), rgba(7, 17, 31, 0.82)),
+    rgba(7, 17, 31, 0.82);
+}
+
+.portfolio-label,
+.portfolio-copy,
+.portfolio-item h3 {
+  margin: 0;
+}
+
+.portfolio-label {
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  color: var(--accent);
+}
+
+.portfolio-item h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.2rem;
+}
+
+.portfolio-copy {
+  margin-top: 0.45rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.portfolio-status {
+  flex-shrink: 0;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
 .phone-frame {
   width: min(100%, 360px);
   padding: 1rem;
@@ -359,8 +439,23 @@ a {
   line-height: 1.8;
 }
 
+.policy-section {
+  margin-top: 2rem;
+}
+
+.policy-section h2 {
+  margin: 0 0 0.85rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  line-height: 1.15;
+}
+
+.policy-card strong {
+  color: var(--text);
+}
+
 .policy-updated {
-  margin-top: 1.75rem;
+  margin: 0 0 1.5rem;
   color: var(--text);
   font-size: 0.95rem;
 }
@@ -392,6 +487,10 @@ a {
   }
 
   .screen-footer {
+    flex-direction: column;
+  }
+
+  .portfolio-item {
     flex-direction: column;
   }
 }
